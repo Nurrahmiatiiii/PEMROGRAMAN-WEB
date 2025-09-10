@@ -6,40 +6,8 @@ Tampilan dibuat estetik dengan animasi, background interaktif, serta navigasi se
 
 ---
 
-## 🎨 Fitur Utama
-- **Desain Responsif & Modern**  
-  Warna biru langit dengan gradasi, font *Poppins*, animasi glowing, fade, dan typing effect.  
+HTML berfungsi sebagai struktur dasar halaman dengan elemen-elemen penting seperti `<nav>` untuk navigasi, `<section>` untuk membagi konten menjadi About, Experience, Quote, dan Contact, serta `<footer>` untuk bagian hak cipta. Ada juga `<img>` untuk menampilkan foto profil, `<h1>` dan `<h2>` untuk judul, `<p>` untuk paragraf deskripsi, dan `<a>` untuk tautan ke media sosial. Dengan HTML ini, kerangka website terbentuk secara rapi dan terorganisir.
 
-- **Navigasi (Navbar) Fixed**  
-  Menu `About`, `Experience`, `Quote`, dan `Contact` selalu tampil di atas.  
+Untuk tampilan visual, digunakan **CSS** yang ditulis di dalam tag `<style>`. Beberapa properti penting antara lain `background: #87CEFA;` pada body untuk memberi warna biru muda, serta `font-family: "Poppins", sans-serif;` untuk konsistensi tipografi. CSS juga digunakan untuk memberikan efek interaktif, misalnya `.profile-pic:hover` yang membuat foto profil membesar dan sedikit berputar ketika diarahkan kursor, atau `.card:hover` yang membuat card pengalaman dan kutipan memiliki bayangan lebih tegas. Selain itu, animasi dibuat dengan `@keyframes`, contohnya animasi typing pada teks, efek glow pada judul, animasi fade-in untuk section, serta animasi melayang (float) untuk emoji. Semua ini menambah kesan dinamis pada tampilan portofolio.
 
-- **About Section**  
-  Foto profil berbentuk lingkaran dengan animasi *hover zoom & rotate*, serta informasi singkat (nama panggilan, asal daerah, hobi, NIM, prodi, universitas).  
-
-- **Experience Section**  
-  Menggunakan **card** untuk menampilkan pengalaman belajar membuat web dengan database MySQL.  
-
-- **Quote Section**  
-  Menampilkan kutipan motivasi dengan tipografi estetik.  
-
-- **Contact Section**  
-  Tombol sosial media interaktif: Instagram, Email, LinkedIn, GitHub.  
-
-- **Background Animasi Partikel**  
-  Dibuat dengan **HTML5 Canvas + JavaScript** sehingga partikel kecil putih bergerak dinamis.  
-
-- **Wave Divider**  
-  Efek *gelombang* SVG memisahkan setiap section.  
-
-- **Footer**  
-  Informasi hak cipta sederhana di bagian bawah halaman.  
-
----
-
-## ⚙️ Teknologi yang Digunakan
-- **HTML5** → Struktur halaman  
-- **CSS3** → Styling & animasi (fade, glow, typing, floating)  
-- **JavaScript (Canvas API)** → Background interaktif dengan partikel  
-- **Font Awesome** → Ikon sosial media  
-- **SVG Wave** → Efek transisi antar section  
-
+Sementara itu, **JavaScript** dipakai khusus untuk memberikan efek animasi pada latar belakang. Elemen `<canvas id="bg">` menjadi media tempat partikel kecil berbentuk lingkaran digambar menggunakan `ctx.arc()`. Posisi partikel diperbarui secara terus-menerus dengan `requestAnimationFrame()`, sehingga tampak bergerak bebas. Agar tidak keluar layar, ditambahkan logika sederhana dengan membalik arah pergerakan (`p.dx *= -1` atau `p.dy *= -1`) saat partikel menyentuh tepi. Efek ini menghasilkan kesan modern dan interaktif karena halaman terasa hidup dengan background yang bergerak.
