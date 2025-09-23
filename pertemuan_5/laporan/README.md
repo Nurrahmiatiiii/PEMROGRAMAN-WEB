@@ -75,6 +75,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 **Bug yang Ditemukan:** Tag `</BODY>` pada baris 3 seharusnya `<BODY>`
 
 **Output yang dihasilkan:**
+
 ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output2D.png?row=true)
 
 
@@ -99,6 +100,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 **Konsep:** Menggunakan `prompt()` untuk interaksi user dan string concatenation dengan operator `+`
 
 **Output yang dihasilkan:**
+
  ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output2%203.png?row=true)
 
 ---
@@ -119,6 +121,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 
 **Konsep:** `window.confirm()` return boolean value (true untuk OK, false untuk Cancel)
 **Output yang dihasilkan:**
+
 ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output3%204.png?row=true)
 
 
@@ -136,6 +139,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 8:** `</script>` - Penutup script
 
 **Output yang dihasilkan:**
+
 ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output5A.png?row=true)
 
 ---
@@ -165,6 +169,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 **Konsep Penting:** Parameter shadowing dan side effect pada global variable
 
 **Output yang dihasilkan:**
+
 ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output5B.png?row=true)
 
 
@@ -196,6 +201,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 24:** `//->` - Penutup komentar (inkonsisten dengan pembuka)
 
 - **Output yang dihasilkan:**
+- 
 ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output7.png?row=true)
 ---
 
@@ -218,6 +224,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 17-19:** Penutup tags HTML
 
 **Output yang Dihasilkan:**
+
 ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output8.png?row=true)
 
 
