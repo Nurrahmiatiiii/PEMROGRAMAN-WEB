@@ -242,7 +242,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 **Bug Potensial:** Input "100" akan dianggap "Tidak Lulus" karena string comparison. Seharusnya menggunakan `parseInt(nilai) >= 60`.
 
 **Output yang Dihasilkan:**
-![alt text](
+![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output2%209.png?row=true)
 ## Ringkasan Temuan
 
 ### Bugs yang Ditemukan:
