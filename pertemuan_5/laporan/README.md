@@ -53,6 +53,9 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 22:** `</body>` - Penutup body
 - **Baris 23:** `</html>` - Penutup html
 
+- **Output yang dihasilkan:**
+- ![alt text](
+
 ---
 
 ### Program 2D - JavaScript Sederhana dengan document.write
@@ -71,6 +74,9 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 9:** `</HTML>` - Penutup HTML
 
 **Bug yang Ditemukan:** Tag `</BODY>` pada baris 3 seharusnya `<BODY>`
+
+**Output yang dihasilkan:**
+ ![alt text](
 
 ---
 
@@ -94,6 +100,9 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 
 **Konsep:** Menggunakan `prompt()` untuk interaksi user dan string concatenation dengan operator `+`
 
+**Output yang dihasilkan:**
+ ![alt text](
+
 ---
 
 ### Program 4.2 - Konfirmasi dengan confirm()
@@ -110,7 +119,8 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 12-14:** Penutup tags HTML
 
 **Konsep:** `window.confirm()` return boolean value (true untuk OK, false untuk Cancel)
-
+**Output yang dihasilkan:**
+ ![alt text](
 ---
 
 ### Program 5A - Variabel dan Operasi Dasar
@@ -125,6 +135,9 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 6:** `document.write(VariabelKu*VariabelKu2);` - Operasi perkalian dan output (1234 * 3 = 3702)
 - **Baris 7:** `// -->` - JavaScript comment dengan HTML comment closer
 - **Baris 8:** `</script>` - Penutup script
+
+- **Output yang dihasilkan:**
+- ![alt text](
 
 ---
 
@@ -151,6 +164,9 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 11-12:** Penutup komentar dan script
 
 **Konsep Penting:** Parameter shadowing dan side effect pada global variable
+**Output yang dihasilkan:**
+![alt text](
+
 
 ---
 
@@ -179,6 +195,8 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 23:** `document.write("8. "+b+"<BR>")` - Output: "8. NaN"
 - **Baris 24:** `//->` - Penutup komentar (inkonsisten dengan pembuka)
 
+- **Output yang dihasilkan:**
+![alt text](
 ---
 
 ### Program 8 - Operasi Matematika (dengan Bug)
@@ -200,6 +218,8 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 17-19:** Penutup tags HTML
 
 **Output yang Dihasilkan:**
+![alt text](
+---
 
 
 ### Program 9 - Operator Ternary (Conditional)
@@ -221,6 +241,8 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 
 **Bug Potensial:** Input "100" akan dianggap "Tidak Lulus" karena string comparison. Seharusnya menggunakan `parseInt(nilai) >= 60`.
 
+**Output yang Dihasilkan:**
+![alt text](
 ## Ringkasan Temuan
 
 ### Bugs yang Ditemukan:
