@@ -117,8 +117,9 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 12-14:** Penutup tags HTML
 
 **Konsep:** `window.confirm()` return boolean value (true untuk OK, false untuk Cancel)
+
 **Output yang dihasilkan:**
- ![alt text](
+ ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output3%204.png?row=true)
 ---
 
 ### Program 5A - Variabel dan Operasi Dasar
