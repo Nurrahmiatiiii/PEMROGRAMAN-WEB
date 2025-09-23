@@ -73,7 +73,8 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 **Bug yang Ditemukan:** Tag `</BODY>` pada baris 3 seharusnya `<BODY>`
 
 **Output yang dihasilkan:**
-![alt text](https://https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output1%202C.png?row=true)
+![alt text](![alt text](https://https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output1%202C.png?row=true)
+
 
 ```
 ### Program 3 - Input User dengan prompt()
