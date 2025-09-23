@@ -23,7 +23,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 12:** `</HTML>` - Penutup HTML
   
 **Output yang dihasilkan:**
-![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output2A.png?row=true)
+![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output2A.png?row=true
 
 ### Program 2C - Event Handling dengan onClick
 ```
@@ -53,7 +53,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 23:** `</html>` - Penutup html
   
 **Output yang dihasilkan:**
-![alt text](https://https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output1%202C.png?row=true)
+
 
 ### Program 2D - JavaScript Sederhana dengan document.write
 **File:** `program2D.html`
@@ -73,7 +73,6 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 **Bug yang Ditemukan:** Tag `</BODY>` pada baris 3 seharusnya `<BODY>`
 
 **Output yang dihasilkan:**
-![alt text](![alt text](https://https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output1%202C.png?row=true)
 
 
 ```
