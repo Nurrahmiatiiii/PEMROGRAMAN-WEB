@@ -54,6 +54,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 23:** `</html>` - Penutup html
   
 **Output yang dihasilkan:**
+
 ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output1%202C.png?row=true)
 
 
@@ -120,6 +121,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 12-14:** Penutup tags HTML
 
 **Konsep:** `window.confirm()` return boolean value (true untuk OK, false untuk Cancel)
+
 **Output yang dihasilkan:**
 
 ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output3%204.png?row=true)
@@ -200,10 +202,10 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 23:** `document.write("8. "+b+"<BR>")` - Output: "8. NaN"
 - **Baris 24:** `//->` - Penutup komentar (inkonsisten dengan pembuka)
 
-- **Output yang dihasilkan:**
-- 
+**Output yang dihasilkan:**
+ 
 ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output7.png?row=true)
----
+
 
 ### Program 8 - Operasi Matematika (dengan Bug)
 **File:** `program8.html`
