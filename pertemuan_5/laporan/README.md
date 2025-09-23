@@ -55,8 +55,8 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
   
  **Output yang dihasilkan:**
  ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output1%202C.png?row=true).
----
-
+```
+```
 ### Program 2D - JavaScript Sederhana dengan document.write
 **File:** `program2D.html`
 
@@ -76,9 +76,8 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 
 **Output yang dihasilkan:**
  ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output2D.png?row=true).
-
----
-
+```
+```
 ### Program 3 - Input User dengan prompt()
 **File:** `program3.html`
 
