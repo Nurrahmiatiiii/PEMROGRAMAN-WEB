@@ -196,7 +196,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 24:** `//->` - Penutup komentar (inkonsisten dengan pembuka)
 
 - **Output yang dihasilkan:**
-![alt text](
+![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output7.png?row=true)
 ---
 
 ### Program 8 - Operasi Matematika (dengan Bug)
