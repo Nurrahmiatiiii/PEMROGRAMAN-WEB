@@ -23,7 +23,7 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 12:** `</HTML>` - Penutup HTML
   
 **Output yang dihasilkan:**
-![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output2A.png ?row=true)
+![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output2A.png?row=true)
 ```
 ### Program 2C - Event Handling dengan onClick
 ```
