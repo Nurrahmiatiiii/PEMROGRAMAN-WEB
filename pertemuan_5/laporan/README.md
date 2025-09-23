@@ -163,8 +163,9 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 11-12:** Penutup komentar dan script
 
 **Konsep Penting:** Parameter shadowing dan side effect pada global variable
+
 **Output yang dihasilkan:**
-![alt text](
+![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output5B.png?row=true)
 
 
 ---
