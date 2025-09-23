@@ -114,13 +114,13 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 9:** `"Apakah anda sudah yakin ?");` - Parameter confirm dan penutup fungsi
 - **Baris 10:** `document.write("Jawaban Anda: " + jawaban);` - Output hasil confirm (true/false)
 - **Baris 11:** `//-->` - Penutup komentar
+
 - **Baris 12-14:** Penutup tags HTML
 
 **Konsep:** `window.confirm()` return boolean value (true untuk OK, false untuk Cancel)
-
 **Output yang dihasilkan:**
- ![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output3%204.png?row=true)
----
+![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output3%204.png?row=true)
+
 
 ### Program 5A - Variabel dan Operasi Dasar
 **File:** `program5A.html`
@@ -135,8 +135,8 @@ Repository ini berisi kumpulan file HTML dengan JavaScript untuk pembelajaran Pe
 - **Baris 7:** `// -->` - JavaScript comment dengan HTML comment closer
 - **Baris 8:** `</script>` - Penutup script
 
-- **Output yang dihasilkan:**
-- ![alt text](
+**Output yang dihasilkan:**
+![alt text](https://github.com/Nurrahmiatiiii/PEMROGRAMAN-WEB/blob/master/pertemuan_5/laporan/output%20code/output5A.png?row=true)
 
 ---
 
