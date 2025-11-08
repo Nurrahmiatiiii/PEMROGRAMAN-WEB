@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
     $query = "DELETE FROM diaries WHERE id = '$id'";
     
     if (mysqli_query($koneksi, $query)) {
-        $_SESSION['success'] = "Diary berhasil dihapus!";
+        $_SESSION['success'] = "Diary berhasil dihapuss!";
     } else {
         $_SESSION['error'] = "Terjadi kesalahan: " . mysqli_error($koneksi);
     }
