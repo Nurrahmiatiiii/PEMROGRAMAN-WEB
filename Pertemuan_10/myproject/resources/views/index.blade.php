@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayoo - Minuman Spesial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0e9f6e',
+                        secondary: '#ffcc00',
+                        accent: '#f05252',
+                        dark: '#1f2937',
+                        light: '#f9fafb'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+                    animation: {
+                        'fadeIn': 'fadeIn 1s ease-in-out',
+                        'slideInLeft': 'slideInLeft 1s ease-out',
+                        'slideInRight': 'slideInRight 1s ease-out',
+                        'bounceIn': 'bounceIn 1s ease-out',
+                        'pulseSlow': 'pulseSlow 2s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideInLeft: {
+                            '0%': { transform: 'translateX(-100%)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' }
+                        },
+                        slideInRight: {
+                            '0%': { transform: 'translateX(100%)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' }
+                        },
+                        bounceIn: {
+                            '0%': { transform: 'scale(0.3)', opacity: '0' },
+                            '50%': { transform: 'scale(1.05)', opacity: '0.8' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        },
+                        pulseSlow: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.7' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1597481499750-3e11b15e8e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-bg {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1597481499750-3e11b15e8e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .about-bg {
+            background: linear-gradient(rgba(14, 159, 110, 0.9), rgba(14, 159, 110, 0.9)), url('https://images.unsplash.com/photo-1597481499750-3e11b15e8e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+        .promo-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .floating-action {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-poppins">
+    <!-- Header & Navigation -->
+    <header class="fixed w-full z-50 bg-white shadow-md">
+        <nav class="fixed top-0 left-0 w-full z-50 bg-white shadow-md py-4 text-lg"">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-glass-whiskey text-2xl text-primary"></i>
+                    <span class="text-3xl font-extrabold text-green-500">Hayoo</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-dark hover:text-primary transition duration-300">Beranda</a>
+                    <a href="#about" class="text-dark hover:text-primary transition duration-300">Tentang</a>
+                    <a href="#products" class="text-dark hover:text-primary transition duration-300">Produk</a>
+                    <a href="#contact" class="text-dark hover:text-primary transition duration-300">Kontak</a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <a href="https://wa.me/6282158238929" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-green-700 transition duration-300">Pesan Sekarang</a>
+                </div>
+                
+                <button class="md:hidden text-dark">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Promo Banner -->
+    <div class="promo-banner py-3 text-center mt-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-center">
+                <div class="flex items-center mb-2 md:mb-0">
+                    <i class="fas fa-gift text-white text-xl mr-2"></i>
+                    <span class="text-white font-bold text-lg">PROMO SPESIAL: !</span>
+                </div>
+                <div class="flex items-center ml-0 md:ml-6">
+                    <span class="text-white mr-2">Hubungi kami:</span>
+                    <div class="flex space-x-2">
+                        <a href="https://instagram.com/hayoo_indonesia" class="bg-white text-purple-600 px-3 py-1 rounded font-bold hover:bg-gray-100 transition duration-300 flex items-center">
+                            <i class="fab fa-instagram mr-1"></i> Instagram
+                        </a>
+                        <a href="https://wa.me/6282158238929" class="bg-white text-green-600 px-3 py-1 rounded font-bold hover:bg-gray-100 transition duration-300 flex items-center">
+                            <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-green-500 min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 animate-slideInLeft">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Hayoo, <span class="text-secondary"> Udah Cobain </span> yang Segar Ini Belum </h1>
+                    <p class="text-lg text-gray-200 mb-8">terbuat dari bahan berkualitas dengan berbagai pilihan rasa manis dan creamy yang siap nyegerin harimu.</p>
+                    <div class="flex space-x-4">
+                        <a href="#products" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-green-700 transition duration-300 animate-pulseSlow">Lihat Menu</a>
+                        <a href="https://instagram.com/hayoo_indonesia" class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-dark transition duration-300 flex items-center">
+                            <i class="fab fa-instagram mr-2"></i> Follow IG
+                        </a>
+                    </div>
+                    <div class="mt-6 flex space-x-4">
+                        <a href="https://wa.me/6282158238929" class="bg-secondary text-dark px-6 py-3 rounded-full font-bold hover:bg-yellow-400 transition duration-300 flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i> Pesan via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-slideInRight">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-white rounded-full flex items-center justify-center shadow-2xl animate-float">
+                            <img src="images/hero-minuman.jpg" alt="Minuman" class="w-64 h-64 object-cover rounded-full">
+                        </div>
+                        <div class="absolute -top-4 -right-4 bg-secondary text-dark px-4 py-2 rounded-full font-bold animate-bounceIn">
+                            <span>100% Alami</span>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 bg-accent text-white px-4 py-2 rounded-full font-bold animate-bounceIn">
+                            <span>Fresh Setiap Hari</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-bg py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-fadeIn">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Mengapa Memilih <span class="text-secondary">Hayoo</span>?</h2>
+                <p class="text-lg text-gray-200 max-w-2xl mx-auto">Kami menghadirkan minuman dengan cita rasa autentik yang telah dinikmati oleh ribuan pelanggan di seluruh negeri.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-effect p-8 rounded-2xl text-center text-white animate-slideInLeft">
+                    <div class="bg-white text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-leaf text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Bahan Berkualitas</h3>
+                    <p class="text-gray-200">Kami menggunakan bahan-bahan pilihan dari sumber terbaik, dipilih pada waktu yang tepat untuk memastikan cita rasa terbaik.</p>
+                </div>
+                
+                <div class="glass-effect p-8 rounded-2xl text-center text-white animate-fadeIn">
+                    <div class="bg-white text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-mortar-pestle text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Resep Tradisional</h3>
+                    <p class="text-gray-200">Resep warisan turun-temurun yang diolah dengan cara tradisional untuk mempertahankan keaslian rasa minuman Indonesia.</p>
+                </div>
+                
+                <div class="glass-effect p-8 rounded-2xl text-center text-white animate-slideInRight">
+                    <div class="bg-white text-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Dibuat dengan Cinta</h3>
+                    <p class="text-gray-200">Setiap gelas minuman kami dibuat dengan penuh cinta dan perhatian untuk memberikan pengalaman minum yang tak terlupakan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="product-bg py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-fadeIn">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Menu <span class="text-primary">Spesial</span> Kami</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Temukan berbagai varian minuman dengan cita rasa unik yang cocok untuk segala suasana.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/green-tea.jpg" alt="Thai Tea" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Green Tea</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Green%20Tea" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>
+                
+                <!-- Menu 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/thai-tea.jpg" alt="Thai Tea" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Thai Tea</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Thai%20Tea" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>
+                
+                <!-- Menu 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/chocolate-milk.jpg" alt="Chocolate Milk" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Chocolate Milk</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Chocolate%20Milk" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>
+                
+                <!-- Menu 4 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/taro-milk.jpg" alt="Taro Milk" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Taroo Milk</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Taro%20Milk" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>
+                
+                <!-- Menu 5 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/vanila-milk.jpg" alt="Vanila Milk" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Vanila Milk</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Vanila%20Milk" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>
+                
+                <!-- Menu 6 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/milo-tea.jpg" alt="Milo Tea" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Milo Tea</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Milo%20Tea" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>
+                
+                <!-- Menu 7 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/redvelvet-milk.jpg" alt="Red Velved Milk" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Red Velved Milk</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Red%20Velvet%20Milk" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>
+                
+                <!-- Menu 8 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/caramel-milk.jpg" alt="Caramel Milk" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Caramel Milk</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Caramel%20Milk" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>
+                
+                <!-- Menu 9 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/brownsugar-tea.jpg" alt="Brown Sugar Tea" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Brown Sugar Tea</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Brown%20Sugar%20Tea" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>
+                
+                <!-- Menu 10 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/strawberry-milk.jpg" alt="Strawberry Milk" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Strawberry Milk</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Strawberry%20Milk" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>
+                
+                <!-- Menu 11 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/milk-tea.jpg" alt="Milk Tea" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Milk Tea</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Milk%20Tea" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>   
+                
+                <!-- Menu 12 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/lemonade ice-tea.jpg" alt="Lemonade Ice Tea" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Lemonade Ice Tea</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Lemonade%20Ice%20Tea" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>   
+                
+                <!-- Menu 13 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/oval-milk.jpg" alt="Oval Milk" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Oval Milk</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Oval%20Milk" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>   
+                <!-- Menu 14 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/Manggo-tea.jpg" alt="Manggo Tea" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Manggo Tea</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Manggo%20Tea" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+            </div>
+                 <!-- Menu 15 -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/oval-tea.jpg" alt="Oval Tea" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Oval Tea</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Oval%20Tea" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+                </div>
+                <!-- Menu 16 -->
+                 <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/milo-milk.jpg" alt="Milo Milk" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Milo Milk</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 12.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Milo%20Milk" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+                </div>
+                <!-- Menu 17 - Iced Coffee -->
+                <div class="bg-white rounded-2xl shadow-lg p-4 product-card">
+                     <div class="flex justify-center mb-3">
+                        <img src="images/iced-coffee.jpg" alt="Iced Coffee" class="max-w-32">
+                 </div>
+                       <h3 class="text-lg font-bold text-center">Iced Coffee</h3>
+                 <p class="text-primary font-bold text-center my-2">Rp 15.000</p>
+                 <a href="https://wa.me/6282158238929?text=Halo,%20saya%20mau%20pesan%20Iced%20Coffee" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 block text-center">Pesan Sekarang</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="bg-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-primary to-green-600 rounded-2xl p-8 md:p-12 shadow-2xl animate-bounceIn">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Pesan <span class="text-secondary">Sekarang</span></h2>
+                        <p class="text-lg text-gray-100 mb-6">Mulailah harimu dan segarkan suasana hatimu dengan minuman favoritmu.</p>
+                        <div class="flex space-x-4">
+                            <a href="https://wa.me/6282158238929" class="bg-secondary text-dark px-6 py-3 rounded-full font-bold hover:bg-yellow-400 transition duration-300">
+                                <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                            </a>
+                            <a href="tel:+6282158238929" class="border-2 border-white text-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-dark transition duration-300">
+                                <i class="fas fa-phone mr-2"></i> Telepon
+                            </a>
+                        </div>
+                        <div class="mt-4">
+                            <a href="https://instagram.com/hayoo_indonesia" class="text-white hover:text-secondary transition duration-300 flex items-center">
+                                <i class="fab fa-instagram mr-2"></i> @hayoo_indonesia
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-md">
+                            <h3 class="text-xl font-bold text-dark mb-4">Form Pemesanan</h3>
+                            <form>
+                                <div class="mb-4">
+                                    <input type="text" placeholder="Nama Lengkap" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                                <div class="mb-4">
+                                    <input type="tel" placeholder="Nomor Telepon" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                                <div class="mb-4">
+                                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <option>Pilih Menu</option>
+                                        <option>Green Tea - Rp 12.000</option>
+                                        <option>Thai Tea - Rp 12.000</option>
+                                        <option>Chocolate Milk - Rp 12.000</option>
+                                        <option>Taro Milk - Rp 12.000</option>
+                                        <option>Vanilla Milk - Rp 12.000</option>
+                                        <option>Milo Tea - Rp 12.000</option>
+                                        <option>Red Velvet Milk - Rp 12.000</option>
+                                        <option>Caramel Milk - Rp 12.000</option>
+                                        <option>Brown Sugar Tea - Rp 12.000</option>
+                                        <option>Strawberry Milk - Rp 12.000</option>
+                                        <option>Milk Tea - Rp 12.000</option>
+                                        <option>Lemonade Ice Tea - Rp 12.000</option>
+                                        <option>Oval Milk - Rp 12.000</option>
+                                        <option>Manggo Tea - Rp 12.000</option>
+                                        <option>Oval Tea - Rp 12.000</option>
+                                        <option>Milo Milk - Rp 12.000</option>
+                                        <option>Ice Coffee - Rp 15.000</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <input type="number" placeholder="Jumlah Pesanan" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                                </div>
+                                <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-green-700 transition duration-300">Pesan Sekarang</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-fadeIn">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Hubungi <span class="text-primary">Kami</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Kami siap melayani Anda dengan sepenuh hati. Jangan ragu untuk menghubungi kami.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="animate-slideInLeft">
+                    <h3 class="text-2xl font-bold text-dark mb-6">Informasi Kontak</h3>
+                    
+                    <div class="flex items-start mb-6">
+                        <div class="bg-primary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark mb-1">Alamat</h4>
+                            <p class="text-gray-600">Jln.Monumen emmy Saelan no.110</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-6">
+                        <div class="bg-primary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark mb-1">Telepon/WhatsApp</h4>
+                            <p class="text-gray-600">
+                                <a href="tel:+6282158238929" class="hover:text-primary transition duration-300">+62 821-5823-8929</a>
+                            </p>
+                            <a href="https://wa.me/6282158238929" class="text-primary hover:underline mt-1 inline-block">Chat via WhatsApp</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-6">
+                        <div class="bg-primary text-white p-3 rounded-full mr-4">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark mb-1">Instagram</h4>
+                            <p class="text-gray-600">
+                                <a href="https://instagram.com/hayoo_indonesia" class="hover:text-primary transition duration-300">@hayoo_indonesia</a>
+                            </p>
+                            <a href="https://instagram.com/hayoo_indonesia" class="text-primary hover:underline mt-1 inline-block">Follow Instagram Kami</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-primary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark mb-1">Jam Operasional</h4>
+                            <p class="text-gray-600"> 10.00 - 23.00 WITA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-slideInRight">
+                    <h3 class="text-2xl font-bold text-dark mb-6">Kirim Pesan</h3>
+                    <form>
+                        <div class="mb-4">
+                            <input type="text" placeholder="Nama Lengkap" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" placeholder="Instagram" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" placeholder="Subjek" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <textarea rows="5" placeholder="Pesan Anda" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-green-700 transition duration-300">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-glass-whiskey text-2xl text-primary"></i>
+                        <span class="text-xl font-bold">Hayoo<span class="text-primary">Indonesia</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Udah coba semua rasa Hayoo? Temukan favoritmu hari ini! 
+                        #mampirsejenak #sahabathayoo #lagilahihayoo.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/hayoo_indonesia" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                         <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/6282158238929" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Beranda</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">Tentang Kami</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition duration-300">Menu</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Menu Populer</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition duration-300">Ice Coffee</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition duration-300">Brown Sugar Tea</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition duration-300">Strawberry Milk</a><li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition duration-300">Milo milk</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition duration-300">Caramel Milk</a><li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Berlangganan</h3>
+                    <p class="text-gray-400 mb-4">Dapatkan informasi promo dan menu terbaru dari kami.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-dark">
+                        <button class="bg-primary px-4 py-2 rounded-r-lg hover:bg-green-700 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-400 text-sm">Follow kami di:</p>
+                        <div class="flex space-x-2 mt-2">
+                            <a href="https://instagram.com/hayoo_indonesia" class="text-gray-400 hover:text-white transition duration-300">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://wa.me/6282158238929" class="text-gray-400 hover:text-white transition duration-300 ml-4">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="text-center text-sm text-green-500 py-4 bg-gray-50">
+                © 2023 Hayoo.Indonesia.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
+        <a href="https://wa.me/6282158238929" class="bg-green-500 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center floating-action hover:bg-green-600 transition duration-300">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+        <a href="https://instagram.com/hayoo_indonesia" class="bg-purple-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center floating-action hover:bg-purple-700 transition duration-300">
+            <i class="fab fa-instagram text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-32 right-6 bg-primary text-white w-12 h-12 rounded-full shadow-lg hover:bg-green-700 transition duration-300 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Product card hover effect
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
